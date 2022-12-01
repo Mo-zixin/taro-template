@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "tl-homemaking-weapp",
   "description": "桃李家政",
-  "appid": "touristappid",
+  "appid": "wxd55a6266cd92ab95",
   "setting": {
     "urlCheck": true,
     "es6": false,

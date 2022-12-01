@@ -1,3 +1,19 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Mozixin
+ * @Date: 2022-12-01 12:30:50
+ * @LastEditors: Mozixin
+ * @LastEditTime: 2022-12-01 15:08:45
+ */
+import path from "path";
+
+
+const resolvePath = (filePath) => path.resolve(__dirname, "..", filePath)
+
+console.log(__dirname );
+
+
 const config = {
   projectName: 'tl-homemaking-weapp',
   date: '2022-12-1',
@@ -9,7 +25,7 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins: ["@tarojs/plugin-html"],
   defineConstants: {
   },
   copy: {
@@ -20,6 +36,11 @@ const config = {
   },
   framework: 'react',
   compiler: 'webpack5',
+  sass: {
+    resource:[
+      resolvePath('theme/index.scss'),
+    ],
+  },
   cache: {
     enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
@@ -28,7 +49,7 @@ const config = {
       pxtransform: {
         enable: true,
         config: {
-
+          selectorBlackList: ['nut-']
         }
       },
       url: {
