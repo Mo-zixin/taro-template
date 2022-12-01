@@ -4,7 +4,7 @@
  * @Author: Mozixin
  * @Date: 2022-12-01 12:30:50
  * @LastEditors: Mozixin
- * @LastEditTime: 2022-12-01 15:08:45
+ * @LastEditTime: 2022-12-01 16:13:37
  */
 import path from "path";
 
@@ -40,6 +40,9 @@ const config = {
     resource:[
       resolvePath('theme/index.scss'),
     ],
+  },
+  alias:{
+    'src':resolvePath('src')
   },
   cache: {
     enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
