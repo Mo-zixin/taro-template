@@ -4,7 +4,7 @@
  * @Author: Mozixin
  * @Date: 2022-12-01 12:30:50
  * @LastEditors: Mozixin
- * @LastEditTime: 2022-12-01 16:13:37
+ * @LastEditTime: 2022-12-01 16:34:38
  */
 import path from "path";
 
@@ -42,6 +42,7 @@ const config = {
     ],
   },
   alias:{
+    '@':resolvePath('src'),
     'src':resolvePath('src')
   },
   cache: {
