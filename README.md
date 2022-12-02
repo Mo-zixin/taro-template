@@ -10,8 +10,8 @@
 
 ## 3.文件目录
 
-│  .editorconfig
-│  .eslintrc
+│  .editorconfig <br>
+│  .eslintrc <br>
 │  .gitignore
 │  babel.config.js
 │  package.json
@@ -20,72 +20,71 @@
 │  README.md
 │  tsconfig.json
 │  yarn.lock
-│
 ├─config
 │      dev.js
 │      index.js
 │      prod.js
-│
+│      
 ├─src
 │  │  app.config.ts
 │  │  app.scss
 │  │  app.tsx
 │  │  index.html
-│  │
-│  ├─base-ui
+│  │  
+│  ├─base-ui  //公共ui组件
 │  │      index.ts
-│  │
-│  ├─components
+│  │      
+│  ├─components // 项目组件
 │  │      index.ts
-│  │
-│  ├─config
+│  │      
+│  ├─config  // 项目配置
 │  │      index.ts
-│  │      page-path.ts
-│  │      services.ts
-│  │
-│  ├─hooks
+│  │      page-path.ts // 页面路径配置
+│  │      services.ts // 请求配置
+│  │      
+│  ├─hooks 
 │  │      index.ts
-│  │
+│  │      
 │  ├─pages
 │  │  └─index
 │  │      │  index.config.ts
 │  │      │  index.scss
 │  │      │  index.tsx
-│  │      │
-│  │      ├─nutui-test
+│  │      │  
+│  │      ├─nutui-test  // ui 测试
 │  │      │      index.config.ts
 │  │      │      index.scss
 │  │      │      index.tsx
-│  │      │
-│  │      └─redux-test
+│  │      │      
+│  │      └─redux-test // redux测试
 │  │              index.config.ts
 │  │              index.scss
 │  │              index.tsx
-│  │
-│  ├─services
-│  │  │  index.ts
-│  │  │
-│  │  ├─model
+│  │              
+│  ├─services // 服务
+│  │  │  index.ts 
+│  │  │  
+│  │  ├─model // 模块请求
 │  │  │      index.ts
-│  │  │
-│  │  └─request
-│  │          index.ts
-│  │          requestCreate.ts
-│  │
+│  │  │      
+│  │  └─request 
+│  │          index.ts // 拦截器添加
+│  │          requestCreate.ts  //请求封装
+│  │          
 │  ├─store
-│  │  │  index.ts
-│  │  │
-│  │  └─model
+│  │  │  index.ts 
+│  │  │  
+│  │  └─model 
 │  │          global.ts
 │  │          index.ts
-│  │
+│  │          
 │  └─utils
 │          index.ts
-│          taro-utils.ts
-│
-├─theme
+│          taro-utils.ts // taro 方法封装
+│          
+├─theme 
 │      index.scss
-│      nutui-theme.scss
-│
+│      nutui-theme.scss // nutui 主题变量 
+│      
 └─types
         global.d.ts
