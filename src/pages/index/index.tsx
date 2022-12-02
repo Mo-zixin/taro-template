@@ -1,29 +1,61 @@
 /*
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: Mozixin
  * @Date: 2022-12-01 12:30:50
  * @LastEditors: Mozixin
- * @LastEditTime: 2022-12-01 16:47:38
+ * @LastEditTime: 2022-12-02 11:28:59
  */
-import { View } from '@tarojs/components'
-import React, { memo ,useState } from 'react'
-import { Button, Cell, Calendar  } from '@nutui/nutui-react-taro';
-import { useSelector, shallowEqual,useDispatch} from 'react-redux'
-import { changeUserInfoActions } from '@/store/model';
-   
- 
+import { View } from "@tarojs/components";
+
+import React, { memo } from "react";
+import { Button, Cell, Calendar } from "@nutui/nutui-react-taro";
+import { MORequest } from "@/services";
+
+// /home/goodprice
+const BASE_URL = "http://codercba.com:1888/airbnb/api";
 
 const index = memo(() => {
-  // 使用redux 
-  const { userInfo } = useSelector(state => ({ userInfo: state.global.userInfo }), shallowEqual)
-  const dispatch = useDispatch()
-  
+  // console.dir(MORequest);
+
+  const getXXX = () => {
+    MORequest.request(
+      { url: BASE_URL + "/home/goodprice" },
+      {
+        showLoading: true,
+        isAuth: true,
+        LoadingTitle: "请求中",
+      }
+    )
+      .then((res) => {
+        console.log(res, "PAGE");
+      })
+      .catch((err) => {
+        console.log(err, "err PAGE");
+      });
+    MORequest.request(
+      { url: BASE_URL + "/home/goodprice" },
+      {
+        showLoading: true,
+        isAuth: false,
+        LoadingTitle: "请求中",
+      }
+    )
+      .then((res) => {
+        console.log(res, "PAGE");
+      })
+      .catch((err) => {
+        console.log(err, "err PAGE");
+      });
+  };
+
   return (
     <View>
-      <Button type='warning' className='btn' onClick={() => dispatch(changeUserInfoActions({ name: new Date().getTime() }))}>{userInfo?.name} </Button>
+      <Button type="warning" className="btn" onClick={getXXX}>
+        发起请求{" "}
+      </Button>
     </View>
-  )
-})
-  
-export default index
+  );
+});
+
+export default index;

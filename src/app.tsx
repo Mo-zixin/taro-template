@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Mozixin
+ * @Date: 2022-12-01 12:30:50
+ * @LastEditors: Mozixin
+ * @LastEditTime: 2022-12-01 21:12:54
+ */
 import React, { memo, useEffect } from 'react'
 import { useDidShow, useDidHide } from '@tarojs/taro'
 
@@ -34,3 +42,9 @@ const App = memo((props) => {
 })
 
 export default App
+
+
+
+
+
+
