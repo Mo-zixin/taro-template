@@ -1,8 +1,8 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "tl-homemaking-weapp",
-  "description": "桃李家政",
-  "appid": "wxd55a6266cd92ab95",
+  "projectname": "taro-template",
+  "description": "taro-template",
+  "appid": "--",
   "setting": {
     "urlCheck": true,
     "es6": false,

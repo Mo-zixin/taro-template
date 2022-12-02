@@ -4,7 +4,7 @@
  * @Author: Mozixin
  * @Date: 2022-12-01 12:30:50
  * @LastEditors: Mozixin
- * @LastEditTime: 2022-12-02 11:28:59
+ * @LastEditTime: 2022-12-02 12:26:24
  */
 import { View } from "@tarojs/components";
 
@@ -13,7 +13,7 @@ import { Button, Cell, Calendar } from "@nutui/nutui-react-taro";
 import { MORequest } from "@/services";
 
 // /home/goodprice
-const BASE_URL = "http://codercba.com:1888/airbnb/api";
+const BASE_URL = "";
 
 const index = memo(() => {
   // console.dir(MORequest);
